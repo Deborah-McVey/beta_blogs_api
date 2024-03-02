@@ -8,8 +8,7 @@ class BlogsController < ApplicationController
     end
   
     def create 
-      blog = Blog.new(blog_params)
-  
+      blog = @current_user.blogs.new(blog_params)
       
       if blog.save
         render json: BlogBlueprint.render(blog, view: :normal), status: :created
@@ -21,7 +20,7 @@ class BlogsController < ApplicationController
     private 
   
     def blog_params 
-      params.permit(:title, :content, :user_id)
+      params.permit(:title, :content)
     end
-  
   end
+  
