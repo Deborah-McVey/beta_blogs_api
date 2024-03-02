@@ -2,6 +2,12 @@ source "https://rubygems.org"
 
 ruby "3.2.0"
 
+# Blueprinter is a JSON Object Presenter for Ruby that takes business objects and breaks them down into simple hashes and serializes them to JSON. It can be used in Rails in place of other serializers (like JBuilder or ActiveModelSerializers). It is designed to be simple, direct, and performant.
+gem 'blueprinter'
+
+# login and JWT
+gem 'jwt'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3"
 
